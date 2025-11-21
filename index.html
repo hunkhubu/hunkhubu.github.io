@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水份和矿粉干重测定</title>
+    <!--引入外部CSS-->
+    <link rel="stylesheet" href="hunkhubu.github.io/style.css">
+</head>
+
+
+<body>
+
+    <div class="container">
+        <h1>水份测定计算器</h1>
+        <div class="formula">
+            水份 =（湿重-干重）/（湿重-盘重）×100% <br>
+            矿粉干重 = 矿粉湿重 x（1-水份%）
+        </div>
+    
+
+        <div class="input-group">
+            <label for="wet-weight">湿重(克): </lable>
+            <input type="number" id="wet-weight" placeholder="请输入湿重" required>
+        </div>
+
+        <div class="input-group">
+            <label for="dry-weight">干重(克): </label>
+            <input type="number" id="dry-weight" placeholder="请输入干重" required>
+        </div>  
+
+        <div class="input-group">
+            <label for="dish-weight">盘重(克): </label>
+            <input type="number" id="dish-weight" placeholder="请输入盘重" required>
+        </div>
+
+        <div class="input-group">
+            <label for="wet-weight-MP">矿粉湿重(吨)：</label>
+            <input type="number" id="wet-weight-MP" placeholder="请输入矿粉湿重" required>
+        
+        </div>
+
+        <button onclick="calculateMoisture()">计算水份和矿粉干重</button>
+
+        <!--结果以label＋readonly input形式展示-->
+        <div class="input-group">
+            <label for="moisture-content">水份含量(%): </label>
+            <input type="number" id="moisture-content" readonly placeholder="等待计算...">
+        </div>
+        <div class="input-group">
+            <label for="moisture-content-MP">矿粉干重(吨): </label>
+            <input type="number" id="moisture-content-MP" readonly placeholder="等待计算...">
+        </div>
+       
+
+
+        <div class="explanation">
+            <h3>公式说明：</h3>
+            <p>本计算器使用公式：</p>
+            <p>水份=（湿重-干重）/（湿重-盘重）x100%</p>
+            <p>矿粉干重= 矿粉湿重x(1-水份含量%)</p>
+            <p>其中，湿重为样品的初始重量，干重为样品烘干后的重量，盘重为用于称量样品的容器重量。</p>
+        </div>
+    </div>
+
+    <!--页面内容-->
+    <script src="hunkhubu.github.io/script.js"></script>
+
+
+</body>
+</html>
+
+
